@@ -57,7 +57,7 @@ class Program
     }
     static void FileOutput(string directoryPath, string fileNameToSearch)    //Parses the contents of the CSV file into the desired format
     {
-        string filePath = "C:\\Contact_List\\Contacts.csv";
+        string filePath = Path.Combine(directoryPath, fileNameToSearch);
         try
         {
             using (StreamReader sr = new StreamReader(filePath))
